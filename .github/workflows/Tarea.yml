@@ -18,6 +18,8 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+    - name: Restore
+      run: dotnet restore UniversityGrades.csproj
     - name: Build
       run: dotnet build UniversityGrades.csproj --no-restore
     - name: Test
